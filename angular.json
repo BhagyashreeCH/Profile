@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ResumeBuilder"
+    }
+  },
+  "defaultProject": "ResumeBuilder",
+  "cli": {
+    "analytics": "4d64137c-71b6-45a9-a171-2b7c9a44ec9e"
+  }
 }

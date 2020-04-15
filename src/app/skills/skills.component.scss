@@ -1,0 +1,28 @@
+ul{
+    list-style: none;
+    padding-inline-start: 0px;
+    li{
+        &:first-child{
+            margin-left: 0;
+        }
+        margin: 15px 10px;
+        display: inline-block;
+        background-color: rgba(226, 34, 8, 0.767);
+        border-radius: 5px;
+        padding: 5px 15px;
+        color: white;
+        
+        // .big-circle{
+        //     width:10px;
+        //     border-radius: 50%;
+        //     height: 10px;
+        //     border:1px solid rgba(226, 34, 8, 0.767) ;
+        //     .small-circle{
+        //         width:8px;
+        //         border-radius: 50%;
+        //         height: 8px;
+        //         background-color:rgb(31, 33, 49);
+        //     }
+        // }
+    }
+}

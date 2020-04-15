@@ -1,30 +1,23 @@
 .professional-experience{
-    margin: 20px 0;
-    border: 1px dotted blue;
-    border-left: 3px solid blue;
-    background-color: rgb(241, 241, 240);
-    padding: 10px 10px 10px 20px;
-    border-top-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-}
-.experience{
-    border-bottom: 1px dotted blue;
-    padding-bottom: 40px;
-}
-.summary{
-    padding: 30px 0;
-}
-p strong{
-    font-size: 20px;
-    display: inline-block;
-    padding: 20px 30px;
-    background-image: linear-gradient(-90deg, blue ,lightblue);
-    border-top-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-}
-ul {
-    margin-block-start: 0em;
-    margin-block-end: 0em;
-    padding-inline-start: 20px;
-    margin-top: 40px;
+    ul {
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        padding-inline-start: 20px;
+        margin-top: 20px;
+        list-style-type: none;
+
+        li{
+            margin: 10px 0;
+        }
+        li::before{
+            color: rgba(226, 34, 8, 0.767);  
+            display: inline-block;  
+            width: 10px; 
+            margin-left: -20px; 
+            padding-right: 10px;
+            font-weight: bold; 
+            font-size:22px;
+            content: "\2022";  
+        }
+    }
 }

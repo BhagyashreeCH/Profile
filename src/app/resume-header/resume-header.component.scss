@@ -1,0 +1,62 @@
+.resume-header {
+    color: white;
+    background-color: rgb(47, 49, 66);
+    .profile-name{
+        padding:30px;
+        .profile-pic{
+            width: auto;
+            height: auto;
+            border-radius: 50%;
+            padding: 3px;
+            border: 5px solid rgba(226, 34, 8, 0.767);
+        }
+    }
+    .contact-info{
+        padding: 10px 30px;
+        background-color: rgb(31, 33, 49);
+    }
+    .pst-relative{
+        position: relative;
+        top: -2px;
+    }
+}
+
+// .resume-header-child-1{
+//     flex-basis: 12%;
+// }
+// .resume-header-child-2{
+//     flex-basis: 64%;
+// }
+// .resume-header-child-3{
+//     flex-basis: 24%;
+// }
+// .profile-pic{
+//     width: 100px;
+//     height: 100px;
+//     border-radius: 50%;
+//     border: 1px solid blue;
+// }
+// 
+// span.bold-font{
+//     font-weight: bold;
+//     text-decoration: underline;
+//     padding-right: 10px;
+// }
+
+// @media screen and (max-width: 768px) {
+//     .resume-container{
+//         margin: 10px 10%;
+//     }
+//     .resume-header{
+//         flex-direction: column;
+        
+//     }
+//     .resume-header-child{
+//         flex-basis: 99%;
+//         padding: 10px 0;
+//     }
+//     span.custom-heading{
+//         font-size: 20px;
+//         font-weight: bold;
+//     }
+//   }

@@ -1,6 +1,12 @@
 {
     "personName":"Bhagyashree Channappa Hallur",
     "profilepic":"assets/Bhagya.jpg",
-    "mobilename":8197116393,
-    "email":"Bhagya.eee08@gmail.com"
+    "mobilename": 8197116393,
+    "email":"Bhagya.eee08@gmail.com",
+    "emailIcon":"assets/images/email.png",
+    "phoneIcon":"assets/images/location.png",
+    "locationIcon":"assets/images/location.png",
+    "location":"Bangalore, India",
+    "skypeIcon":"assets/images/location.png",
+    "skype":"bhagya.eee08"
 }

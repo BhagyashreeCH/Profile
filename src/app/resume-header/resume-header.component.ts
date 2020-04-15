@@ -4,16 +4,16 @@ import {Header} from '../model/header';
 @Component({
   selector: 'app-resume-header',
   templateUrl: './resume-header.component.html',
-  styleUrls: ['./resume-header.component.css']
+  styleUrls: ['./resume-header.component.scss']
 })
 export class ResumeHeaderComponent implements OnInit {
 
   constructor(private informationService:InformationService) {  }
-  private headerData:Header;
+  public headerData:Header;
   ngOnInit() {
     this.informationService.getHeaderInfo().subscribe(
       response=> this.headerData = response
     );
+    
   }
-
 }

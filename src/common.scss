@@ -1,0 +1,113 @@
+@mixin common-font($fontSize,$fontWeight,$color){
+    font-size: $fontSize;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: $fontWeight;
+    color:$color;
+}
+h1{
+    @include common-font(28px,bold,white);
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    line-height: 34px;
+}
+h2{
+    @include common-font(22px,bold,rgba(226, 34, 8, 0.767));
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    
+    .brd-bottom{
+        border-bottom: 2px solid ;
+        padding-bottom: 2px;
+        line-height: 34px;
+    }
+}
+h3{
+    @include common-font(16px,bold,black);
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    .brd-bottom{
+        border-bottom: 2px solid ;
+        padding-bottom: 2px;
+    }
+}
+p{
+    @include common-font(16px,normal,black);
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+}
+p.white{
+    @include common-font(16px,normal,white);
+}
+.flexclass-row{
+    display: flex;
+    flex-direction: row;   
+    align-items: flex-start;
+    &.space-btn{
+        justify-content: space-between; 
+    }
+    @media screen and (max-width: 768px) {
+        flex-direction: column;    
+    }
+        
+}
+.flex-basis{
+    &-fifty{
+        flex-basis: 50%;
+        @media screen and (max-width: 768px) {
+            flex-basis: 100%;    
+        }
+    }
+    &-fortyfive{
+        flex-basis: 45%;
+        @media screen and (max-width: 768px) {
+            flex-basis: 100%;    
+        }
+    }
+    &-seventy{
+        @media screen and (max-width: 768px) {
+            flex-basis: 100%;    
+        }
+    }
+    &-thirty{
+        @media screen and (max-width: 768px) {
+            flex-basis: 100%;    
+        }
+    }
+    &-twenty{
+        @media screen and (max-width: 768px) {
+            flex-basis: 100%;    
+        }
+    }
+}
+.img-icon{
+    min-height: 15px;
+    width: 15px;
+    padding-right: 10px;
+}
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+    @media screen and (max-width: 768px) {
+        float: left;
+    }
+}
+
+
+$sizes: 12;
+
+@mixin margin-classes {
+  @for $i from 1 through $sizes {
+     $margin: $i * 0.5rem;
+    /* margin #{$margin} */
+    .m#{$i}  {margin: $margin;}
+    .ml#{$i} {margin-left: $margin;}
+    .mr#{$i} {margin-right: $margin;}
+    .mt#{$i} {margin-top: $margin;}
+    .mb#{$i} {margin-bottom: $margin;}
+    .mx#{$i} {margin-left: $margin; margin-right: $margin;}
+    .my#{$i} {margin-top: $margin; margin-bottom: $margin;}
+  }
+}
+@include margin-classes;

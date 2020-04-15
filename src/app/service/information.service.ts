@@ -8,8 +8,14 @@ import { Observable } from 'rxjs';
 })
 export class InformationService {
   getUrl:string = '/assets/data/resumeHeader.json';
+  getUrl1:string ='https://api.github.com/users?since=135';
   constructor(private httpClient:HttpClient) { }
-  getHeaderInfo():Observable<Header>{
+  getHeaderInfo():Observable<any>{
     return this.httpClient.get<Header>(this.getUrl);
   }
+  getHeaderInfo1():Observable<any[]>{
+    
+    return this.httpClient.get<any[]>(this.getUrl1);
+  }
+  
 }

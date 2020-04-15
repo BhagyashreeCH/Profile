@@ -7,14 +7,16 @@ import { AboutComponent } from './about/about.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { HttpClientModule} from '@angular/common/http';
 import { InformationService } from './service/information.service';
-import { ProfessionalExperienceComponent } from './professional-experience/professional-experience.component'
+import { ProfessionalExperienceComponent } from './professional-experience/professional-experience.component';
+import { SkillsComponent } from './skills/skills.component'
 @NgModule({
   declarations: [
     AppComponent,
     ResumeHeaderComponent,
     AboutComponent,
     ProjectsComponent,
-    ProfessionalExperienceComponent
+    ProfessionalExperienceComponent,
+    SkillsComponent
   ],
   imports: [
     BrowserModule,

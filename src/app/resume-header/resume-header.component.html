@@ -1,15 +1,28 @@
 <div class="resume-header">
-  <div class="resume-header-child resume-header-child-1">
-      <div>
-          <img src='{{headerData.profilepic}}' class='profile-pic'/>
-      </div>
-  </div>
-  <div class="resume-header-child resume-header-child-2">
-      <div><span class="custom-heading">{{headerData.personName}}</span></div>
-      <div>FrontEnd Developer</div>
-  </div>
-  <div class="resume-header-child resume-header-child-3">
-      <div><span cl ass="bold-font">Email: </span>{{headerData.email}}</div>
-      <div><span class="bold-font">Mobile number: </span>{{headerData.mobilename}}</div>
-  </div>
+    <div class="flexclass-row space-btn profile-name">
+        <div class="flex-basis-seventy">
+            <h1 class="mt1">{{headerData.personName}}</h1>
+            <h2 class="mt1">FrontEnd Developer</h2>
+            <p class='white mt2'>I am a front developer, having passion to develop responsive website with frontEnd technologies, looking for a challenging position in the professional field where my skills,
+                 creativity and leadership qualities can be utilized in maximizing company profits
+                 while providing career advancement opportunities in terms of personal and professional growth.</p>
+        </div>
+        <div class="flex-basis-twenty">
+            <img src='{{headerData.profilepic}}' class='profile-pic float-right'/>
+        </div>
+    </div>
+    <div class="contact-info flexclass-row space-btn">
+        <div><img class="img-icon" src='{{headerData.emailIcon}}'/>
+            <span class="pst-relative">{{headerData.email}}</span>
+        </div>
+        <div><img class="img-icon" src='{{headerData.emailIcon}}'/>
+            <span class="pst-relative">{{headerData.mobilename}}</span>
+        </div>
+        <div><img class="img-icon" src='{{headerData.emailIcon}}'/>
+            <span class="pst-relative">{{headerData.location}}</span>
+        </div>
+        <div><img class="img-icon" src='{{headerData.emailIcon}}'/>
+            <span class="pst-relative">{{headerData.skype}}</span>
+        </div>
+    </div>
 </div>

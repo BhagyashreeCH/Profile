@@ -1,0 +1,11 @@
+.resume-container{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 24px;
+
+    .body-container{
+        padding:30px;
+        @media screen and (max-width: 768px) {
+            padding:30px;    
+        }
+    }
+}

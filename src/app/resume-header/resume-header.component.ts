@@ -14,6 +14,8 @@ export class ResumeHeaderComponent implements OnInit {
     this.informationService.getHeaderInfo().subscribe(
       response=> this.headerData = response
     );
-    
+    this.informationService.getHeaderInfo1().subscribe(
+      response=>console.log(response)
+    );
   }
 }

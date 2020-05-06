@@ -4,7 +4,7 @@ import { InfodialogComponent } from './infodialog.component';
 import { NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
-fdescribe('InfodialogComponent', () => {
+describe('InfodialogComponent', () => {
   let component: InfodialogComponent;
   let fixture: ComponentFixture<InfodialogComponent>;
 

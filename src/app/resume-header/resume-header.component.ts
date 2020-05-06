@@ -14,7 +14,7 @@ export interface DialogData {
   styleUrls: ['./resume-header.component.scss']
 })
 export class ResumeHeaderComponent implements OnInit{
-  constructor(private informationService:InformationService, private dialog:MatDialog) {  }
+  constructor(private informationService:InformationService, public dialog:MatDialog) {  }
   public headerData:Header;
   public showLoader:boolean=true;
   animal: string = "Lion";
@@ -25,7 +25,7 @@ export class ResumeHeaderComponent implements OnInit{
     // this.informationService.getHeaderInfo().subscribe(
     //   response=> {this.headerData = response,this.showLoader=false}
     // );
-     
+
   }
   openDialog(): void {
     const dialogRef = this.dialog.open(InfodialogComponent, {

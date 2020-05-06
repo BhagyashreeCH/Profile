@@ -1,7 +1,7 @@
 export interface Header{
     personName:string;
     profilepic:string;
-    mobilename:string;
+    mobilename:number;
     email:string;
     emailIcon:string;
     phoneIcon:string;

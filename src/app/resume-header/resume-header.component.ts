@@ -10,12 +10,13 @@ export class ResumeHeaderComponent implements OnInit {
 
   constructor(private informationService:InformationService) {  }
   public headerData:Header;
+  public showLoader:boolean=true;
   ngOnInit() {
+    this.showLoader=true;
     this.informationService.getHeaderInfo().subscribe(
-      response=> this.headerData = response
+      response=> {this.headerData = response,this.showLoader=false}
+      
     );
-    this.informationService.getHeaderInfo1().subscribe(
-      response=>console.log(response)
-    );
+    
   }
 }

@@ -1,17 +1,21 @@
 <div>
     <h2 class="mb2"><span class="brd-bottom">SKILLS</span></h2>
-    <div class="skillbox">
-        <div class="skillbox-item">Html</div>
-        <div class="skillbox-item">Html5</div>
-        <div class="skillbox-item">CSS</div>
-        <div class="skillbox-item">CSS3</div>
-        <div class="skillbox-item">Less</div>
-        <div class="skillbox-item">Sass</div>
-        <div class="skillbox-item">Javascript</div>
-        <div class="skillbox-item">Jquery</div>
-        <div class="skillbox-item">ANgular</div>
-        <div class="skillbox-item">Bootstrap</div>
-        <div class="skillbox-item">Fkexbox Model</div>
-        <div class="skillbox-item">sitecore</div>
-    </div>
+    <div class="loader" *ngIf='showLoader else thenblock'></div>
+    <ng-template #thenblock>
+        <div class="skillbox">
+            <div class="skillbox-item" *ngFor='let skill of skill'>{{skill.skillName}}</div>
+            <!-- <div class="skillbox-item">Html5</div>
+            <div class="skillbox-item">CSS</div>
+            <div class="skillbox-item">CSS3</div>
+            <div class="skillbox-item">Less</div>
+            <div class="skillbox-item">Sass</div>
+            <div class="skillbox-item">Javascript</div>
+            <div class="skillbox-item">Jquery</div>
+            <div class="skillbox-item">ANgular</div>
+            <div class="skillbox-item">Bootstrap</div>
+            <div class="skillbox-item">Flexbox Model</div>
+            <div class="skillbox-item">Github</div>
+            <div class="skillbox-item">sitecore</div> -->
+        </div>
+    </ng-template>
 </div>

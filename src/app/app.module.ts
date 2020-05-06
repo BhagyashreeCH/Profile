@@ -10,7 +10,10 @@ import { ProfessionalExperienceComponent } from './professional-experience/profe
 import { SkillsComponent } from './skills/skills.component';
 import { OrganizationComponent } from './organization/organization.component';
 import { LanguagesComponent } from './languages/languages.component';
-import { EducationComponent } from './education/education.component'
+import { EducationComponent } from './education/education.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { InfodialogComponent } from './infodialog/infodialog.component';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA,MatDialogModule } from '@angular/material/dialog';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,14 +23,18 @@ import { EducationComponent } from './education/education.component'
     SkillsComponent,
     OrganizationComponent,
     LanguagesComponent,
-    EducationComponent
+    EducationComponent,
+    InfodialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
   providers: [InformationService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [InfodialogComponent]
 })
 export class AppModule { }

@@ -6,11 +6,12 @@ import { NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { of } from 'rxjs';
 import { InfodialogComponent } from '../infodialog/infodialog.component';
+import { ApnService } from '../service/apn.service';
 
 fdescribe('ResumeHeaderComponent', () => {
   let component: ResumeHeaderComponent;
   let fixture: ComponentFixture<ResumeHeaderComponent>;
-
+  let apnService: ApnService;
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ResumeHeaderComponent],
@@ -22,6 +23,7 @@ fdescribe('ResumeHeaderComponent', () => {
 
   beforeEach(() => {
     fixture = TestBed.createComponent(ResumeHeaderComponent);
+    apnService = TestBed.inject(ApnService);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -38,6 +40,7 @@ fdescribe('ResumeHeaderComponent', () => {
         },
       };
     });
+    spyOn(apnService, 'delete').and.returnValue(of(true));
     component.openDialog();
     expect(component.dialog.open).toHaveBeenCalledWith(InfodialogComponent, {
       width: '250px',
@@ -45,8 +48,13 @@ fdescribe('ResumeHeaderComponent', () => {
       data: { name: 'BCH', animal: 'LION' },
     });
     expect(component.animal).toBe('data');
+    expect(component.deleteBtnOptions).toEqual({
+      loader: false,
+      disabled: false,
+    });
   });
 });
+
 const MatDialogMock = {
   open: () => {
     return {

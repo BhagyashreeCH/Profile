@@ -14,6 +14,8 @@ import { EducationComponent } from './education/education.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InfodialogComponent } from './infodialog/infodialog.component';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA,MatDialogModule } from '@angular/material/dialog';
+import {CustomSnackModule} from  './custom-snack-bar/customSnack.module';
+import { ShowSnackMessagesComponent } from './show-snack-messages/show-snack-messages.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,14 +26,16 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA,MatDialogModule } from '@angula
     OrganizationComponent,
     LanguagesComponent,
     EducationComponent,
-    InfodialogComponent
+    InfodialogComponent,
+    ShowSnackMessagesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatDialogModule
+    MatDialogModule,
+    CustomSnackModule
   ],
   providers: [InformationService],
   bootstrap: [AppComponent],

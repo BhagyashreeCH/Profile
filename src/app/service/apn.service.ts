@@ -10,12 +10,13 @@ export class ApnService {
   delete(data) {
     return of(true);
   }
-  sub = new Subject();
-
   onSave() {
     const configArr = [];
     configArr.push(this.getFirstMsg());
     configArr.push(this.getSecondMsg());
+    configArr.push(this.getThirdMsg());
+    configArr.push(this.getFourthMsg());
+    configArr.push(this.getFifthMsg());
     this.saveAllConfiguration(configArr);
   }
   saveAllConfiguration(arr) {
@@ -31,7 +32,7 @@ export class ApnService {
       });
   }
   getFirstMsg() {
-    return throwError({ data: 'first Message 1', type: 'Sucess' }).pipe(
+    return throwError({ data: 'first Message 1'}).pipe(
       catchError((e) => {
         return of({ error: e });
       })
@@ -41,6 +42,27 @@ export class ApnService {
     return of({ data: 'second Message 1', type: 'Sucess' });
   }
 
+  getThirdMsg() {
+    return throwError({ data: 'third Message 1', type: 'Sucess' }).pipe(
+      catchError((e) => {
+        return of({ error: e });
+      })
+    );
+  }
+  getFourthMsg() {
+    return throwError({ data: 'fourth Message 1', type: 'Sucess' }).pipe(
+      catchError((e) => {
+        return of({ error: e });
+      })
+    );
+  }
+  getFifthMsg() {
+    return throwError({ data: 'fifth Message 1'}).pipe(
+      catchError((e) => {
+        return of({ error: e });
+      })
+    );
+  }
   responseHandler(res) {
     const dataObj = res.splice(0, 1);
     const snackData = dataObj[0].error ?  dataObj[0].error :  dataObj[0];

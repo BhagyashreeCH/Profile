@@ -12,8 +12,6 @@ export class ShowSnackMessagesComponent implements OnInit {
   ngOnInit(): void {
   }
   snackedMsg(){
-    this.apnService.getSecondMsg();
-    this.apnService.getFirstMsg();
-    
+    this.apnService.onSave();
   }
 }
